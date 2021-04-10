@@ -1,5 +1,5 @@
 import 'package:ebook_app/general/general_variable.dart';
-import 'package:ebook_app/pages/bot_nav_page/home_page.dart';
+import 'package:ebook_app/pages/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -59,6 +59,7 @@ class _BottomNavigationItemState extends State<BottomNavigationItem> {
         unselectedItemColor: greyColor,
         backgroundColor: whiteColor,
         onTap: _onItemTapped,
+        type: BottomNavigationBarType.fixed,
         selectedLabelStyle: TextStyle(
           fontSize: 12,
           fontWeight: FontWeight.w400,

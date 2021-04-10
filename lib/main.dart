@@ -1,3 +1,4 @@
+import 'package:ebook_app/general/general_variable.dart';
 import 'package:ebook_app/widgets/bottom_navigation_item.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: greenColor,
         fontFamily: "Poppins"
       ),
       home: BottomNavigationItem(),

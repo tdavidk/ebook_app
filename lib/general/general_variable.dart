@@ -1,6 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 
+double defaultMargin = 30;
+
 const Color whiteColor = Color(0xFFFFFFFF);
 const Color backgroundColor = Color(0xFFF8F8F8);
 const Color blackColor = Color(0xFF000000);
