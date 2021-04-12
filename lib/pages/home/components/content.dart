@@ -1,4 +1,5 @@
 import 'package:ebook_app/general/general_variable.dart';
+import 'package:ebook_app/models/book.dart';
 import 'package:ebook_app/pages/home/components/detail_book_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -33,24 +34,6 @@ class _ContentState extends State<Content> {
     "Novel",
     "Technology",
     "Finance",
-  ];
-
-  List trendingNowImages = [
-    "https://cdn.gramedia.com/uploads/items/9786024526986_Sebuah-Seni-Untuk-Bersikap-Bodo-Amat.jpg",
-    "https://cdn.gramedia.com/uploads/items/9786020333175_rich-dad-poor-dad-_edisi-revisi_.jpg",
-    "https://cdn.gramedia.com/uploads/items/9786230022180_Jujutsukaisen_1.jpg"
-  ];
-
-  List trendingNowWriter = [
-    "Mark Manson",
-    "Robert T. Kiyosaki",
-    "Gege Akutami",
-  ];
-
-  List trendingNowTitle = [
-    "Sebuah Seni untuk Bersikap Bodo Amat",
-    "Rich Dad Poor Dad",
-    "Jujutsu Kaisen 01",
   ];
 
   @override
@@ -111,11 +94,11 @@ class _ContentState extends State<Content> {
         ),
         SizedBox(height: 12,),
         Container(
-          height: MediaQuery.of(context).size.height * 0.31,
+          height: size.height * 0.31,
           child: ListView.builder(
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,
-            itemCount: trendingNowImages.length,
+            itemCount: books.length,
             itemBuilder: (context, index) =>
                 Row(
                   children: [
@@ -124,34 +107,34 @@ class _ContentState extends State<Content> {
                       onTap: () {
                         Navigator.push(context,
                             CupertinoPageRoute(builder: (context) {
-                              return DetailBookPage();
+                              return DetailBookPage(book: books[index],);
                             }));
                       },
                       child: Container(
-                        width: MediaQuery.of(context).size.width * 0.29,
+                        width: size.width * 0.29,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              width: MediaQuery.of(context).size.width * 0.29,
-                              height: MediaQuery.of(context).size.height * 0.2,
+                              width: size.width * 0.29,
+                              height: size.height * 0.2,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(6),
                                 image: DecorationImage(
-                                  image: NetworkImage(trendingNowImages[index]),
+                                  image: NetworkImage(books[index].image),
                                   fit: BoxFit.fill,
                                 ),
                               ),
                             ),
                             SizedBox(height: 8,),
-                            Text(trendingNowWriter[index],
+                            Text(books[index].writer,
                               style: TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w500,
                                 color: greyColor,
                               ),
                             ),
-                            Text(trendingNowTitle[index],
+                            Text(books[index].title,
                               style: TextStyle(
                                 fontSize: 14,
                                 height: 1.3,
@@ -163,7 +146,7 @@ class _ContentState extends State<Content> {
                         ),
                       ),
                     ),
-                    index == trendingNowImages.length - 1 ? SizedBox(width: defaultMargin,) : SizedBox(),
+                    index == books.length - 1 ? SizedBox(width: defaultMargin,) : SizedBox(),
                   ],
                 ),
           ),

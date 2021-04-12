@@ -1,7 +1,6 @@
 import 'package:ebook_app/general/general_variable.dart';
 import 'package:ebook_app/pages/home/home_page.dart';
 import 'package:flutter/material.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class BottomNavigationItem extends StatefulWidget {
