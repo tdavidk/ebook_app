@@ -94,7 +94,7 @@ class _ContentState extends State<Content> {
         ),
         SizedBox(height: 12,),
         Container(
-          height: size.height * 0.31,
+          height: 250,
           child: ListView.builder(
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,
@@ -111,13 +111,13 @@ class _ContentState extends State<Content> {
                             }));
                       },
                       child: Container(
-                        width: size.width * 0.29,
+                        width: 110,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              width: size.width * 0.29,
-                              height: size.height * 0.2,
+                              width: 110,
+                              height: 160,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(6),
                                 image: DecorationImage(
@@ -128,6 +128,7 @@ class _ContentState extends State<Content> {
                             ),
                             SizedBox(height: 8,),
                             Text(books[index].writer,
+                              maxLines: 1,
                               style: TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w500,
@@ -135,6 +136,7 @@ class _ContentState extends State<Content> {
                               ),
                             ),
                             Text(books[index].title,
+                              maxLines: 3,
                               style: TextStyle(
                                 fontSize: 14,
                                 height: 1.3,

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+
 
 class Book {
   final image, title, writer, description, language, price;

@@ -1,4 +1,5 @@
 import 'dart:math' as math;
+
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:ebook_app/general/general_variable.dart';
 import 'package:flutter/material.dart';
@@ -70,8 +71,8 @@ class _HistoryState extends State<History> {
                         child: Row(
                           children: [
                             Container(
-                              width: MediaQuery.of(context).size.width * 0.20,
-                              height: MediaQuery.of(context).size.height * 0.14,
+                              width: 80,
+                              height: 120,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(6),
                                 image: DecorationImage(
@@ -81,8 +82,7 @@ class _HistoryState extends State<History> {
                               ),
                             ),
                             SizedBox(width: 12,),
-                            Container(
-                              width: MediaQuery.of(context).size.width * 0.28,
+                            Expanded(
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.start,

@@ -1,8 +1,7 @@
 import 'package:ebook_app/general/general_variable.dart';
 import 'package:ebook_app/models/book.dart';
-import 'package:flutter/material.dart';
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:expandable_text/expandable_text.dart';
+import 'package:flutter/material.dart';
 
 GlobalKey<ScaffoldState> _scaffoldState = GlobalKey<ScaffoldState>();
 
